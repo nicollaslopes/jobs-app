@@ -20,6 +20,8 @@ class JobFactory extends Factory
         return [ 
             'id_company' => Company::all()->random()->id, 
             'title' => fake()->jobTitle(), 
+            'location' => fake()->city(), 
+            'publish_date' => fake()->dateTimeBetween('-2 months', 'now'), 
             'salary' => fake()->randomFloat(2, 1000, 10000), 
             'created_at' => now(), 
             'updated_at' => now()
