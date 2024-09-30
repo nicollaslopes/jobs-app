@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class JobApplicationService
 {
-    public static function createJobApplication(Request $request)
+    public static function createJobApplication(Request $request): bool
     {
         $user = Auth::user();
 
@@ -16,7 +16,7 @@ class JobApplicationService
             'job_id' => 'string|required'
         ]);
 
-        JobApplicationRepository::add([
+        return JobApplicationRepository::add([
             'user_id' => $user->id, 
             'job_id' => $request->job_id
         ]);

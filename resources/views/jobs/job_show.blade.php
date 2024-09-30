@@ -30,4 +30,7 @@
             </div>
         </div>
     </form>
+
+    @include('sweetalert::alert')
+
 </x-app-layout>
