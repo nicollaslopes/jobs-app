@@ -17,7 +17,6 @@ class JobApplicationRepository implements JobApplicationInterface
             ]);
 
             return true;
-
         } catch (\Throwable $th) {
             return false;
         }
