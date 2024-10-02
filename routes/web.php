@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [DashboardController::class, 'show'])->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/jobs/{job}', [JobController::class, 'show'])->middleware(['auth', 'verified'])->name('jobs.show');
+Route::get('/job/{job}', [JobController::class, 'show'])->middleware(['auth', 'verified'])->name('job.show');
 
 Route::post('/application/{application}', [JobApplicationController::class, 'create'])->middleware(['auth', 'verified'])->name('job-application.create');
 

@@ -18,6 +18,6 @@ class JobApplicationController extends Controller
             Alert::success('Success', 'Your application has been submitted!');
         }
 
-        return redirect()->route('jobs.show', $request->job_id);
+        return redirect()->route('job.show', $request->job_id);
     }
 }

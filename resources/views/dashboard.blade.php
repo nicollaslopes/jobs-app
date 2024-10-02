@@ -19,7 +19,7 @@
                                         <p class="card-text">Location: {{ $job->location }}</p>
                                         <p class="card-text">Publish date: {{ \Carbon\Carbon::parse($job->publish_date)->format('d/m/Y') }}</p>
                                         <div class="text-right mt-4">
-                                            <a href="{{route('jobs.show', $job->id)}}" class="card-link btn btn-primary">See details</a>
+                                            <a href="{{route('job.show', $job->id)}}" class="card-link btn btn-primary">See details</a>
                                         </div>
                                     </div>
                                 </div>
