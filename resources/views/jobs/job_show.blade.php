@@ -24,7 +24,7 @@
                                 <p class="card-text mt-2" style="max-height: 150px; overflow: hidden; white-space: pre-line;">{{ $job->description }}</p>
                             </div>
                             <div class="text-muted">
-                                <p><strong>Location:</strong> {{ $job->location }}</p>
+                                <p><strong>Location:</strong> {{ $job->city }}, {{ $job->state }}</p>
                             </div>
                         </div>
                     </div>
