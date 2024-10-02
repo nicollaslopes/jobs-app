@@ -11,6 +11,8 @@ class DashboardController extends Controller
     {
         $jobs = Job::all();
 
+        $companies = [];
+
         foreach ($jobs as $job) {
             $companies[] = Job::find($job->id)->companies;
         }
