@@ -15,7 +15,9 @@
                         <div class="p-6 text-gray-900">
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <h1 class="font-bold text-2xl">{{ $job->title }}</h1>
-                                <button class="btn btn-primary" type="submit">Apply</button>
+                                @if (Auth::user()->role == "user") 
+                                    <button class="btn btn-primary" type="submit">Apply</button>
+                                @endif
                             </div>
                             <div class="mb-4">
                                 <h5 class="text-xl font-semibold">Job Description</h5>
