@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_company')->references('id')->on('companies');
             $table->string('title');
-            $table->string('location');
+            $table->string('city');
+            $table->string('state');
+            $table->string('country');
             $table->text('description');
             $table->timestamp('publish_date');
             $table->decimal('salary', total: 6, places: 2);
