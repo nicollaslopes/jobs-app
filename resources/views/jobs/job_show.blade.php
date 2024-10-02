@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <form action="{{ route('job-application.create', $job->id) }}" method="POST">
+    <form action="{{ route('job.application.create', $job->id) }}" method="POST">
     @csrf
         <input type="hidden" value={{ $job->id}} name="job_id">
         <div class="py-12">
