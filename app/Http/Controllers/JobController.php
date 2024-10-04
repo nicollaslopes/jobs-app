@@ -12,8 +12,11 @@ class JobController extends Controller
 {
     public function show(Job $job)
     {
+        $jobSalary = '$' . number_format($job->salary, 2, ',', '.');
+        
         return view('jobs.job_show', [
-            'job' => $job
+            'job' => $job,
+            'job_salary' => $jobSalary
         ]);
     }
 

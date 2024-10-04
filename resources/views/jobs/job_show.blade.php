@@ -16,7 +16,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <h1 class="font-bold text-2xl">{{ $job->title }}</h1>
                                 @if (Auth::user()->role == "user") 
-                                    <button class="btn btn-primary" type="submit">Apply</button>
+                                    <button class="btn btn-success" type="submit">Apply</button>
                                 @endif
                             </div>
                             <div class="mb-4">
@@ -25,6 +25,12 @@
                             </div>
                             <div class="text-muted">
                                 <p><strong>Location:</strong> {{ $job->city }}, {{ $job->state }}</p>
+                            </div>
+                            <div class="text-muted">
+                                <p><strong>Salary:</strong> {{ $job_salary }}</p>
+                            </div>
+                            <div class="text-right">
+                                <a href="{{ route('dashboard') }}" class="btn btn-secondary form-job-create-input">Go back</a>
                             </div>
                         </div>
                     </div>
