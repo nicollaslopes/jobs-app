@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('city');
             $table->string('state');
             $table->text('description');
-            $table->decimal('salary', total: 6, places: 2);
+            $table->decimal('salary', total: 10, places: 2);
             $table->timestamp('publish_date');
             $table->timestamps();
         });
