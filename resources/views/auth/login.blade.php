@@ -2,6 +2,8 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+    <link rel="stylesheet" href="{{ asset('css/job-create.css') }}">
+
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
@@ -24,8 +26,11 @@
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button class="ms-3">
+        <div class="flex items-center justify-between mt-4">
+            <div class="text-left">
+                <a href="{{ route('welcome') }}" class="btn btn-secondary form-job-create-input">Go back</a>
+            </div>
+            <x-primary-button>
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
