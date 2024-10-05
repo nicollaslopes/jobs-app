@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Company;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,8 +18,11 @@ class JobFactory extends Factory
      */
     public function definition(): array
     {
+        $recruiter = User::inRandomOrder()->where('role', 'recruiter')->first();
+
         return [ 
             'id_company' => Company::all()->random()->id, 
+            'id_recruiter' => $recruiter->id, 
             'title' => fake()->jobTitle(), 
             'city' => fake()->city(), 
             'state' => fake('en_US')->state(), 
