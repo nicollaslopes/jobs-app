@@ -45,8 +45,13 @@
                     <label for="description">Job Description</label>
                     <textarea class="form-control form-job-create-input" name="description" id="description" rows="4" placeholder="Enter job description" required></textarea>
                 </div>
-                <div class="text-right">
-                    <button type="submit" class="btn btn-primary form-job-create-input">Register Job</button>
+                <div class="d-flex justify-content-between">
+                    <div class="text-left">
+                        <a href="{{ route('dashboard') }}" class="btn btn-secondary form-job-create-input">Go back</a>
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-success form-job-create-input">Register Job</button>
+                    </div>
                 </div>
             </div>
         </div>
