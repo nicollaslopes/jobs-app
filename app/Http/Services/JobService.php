@@ -4,6 +4,7 @@ namespace App\Http\Services;
 
 use Illuminate\Http\Request;
 use App\Http\Repositories\JobRepository;
+use Illuminate\Support\Facades\Auth;
 
 class JobService
 {
@@ -18,6 +19,21 @@ class JobService
             'description' => 'string|required',
         ]);
 
+        if (!self::isRecruiter()) {
+            return false;
+        }
+
         return JobRepository::add($request);
+    }
+
+    public static function isRecruiter()
+    {
+        $user = Auth::user();
+
+        if ($user->role == 'recruiter') {
+            return true;
+        } 
+
+        return false;
     }
 }
