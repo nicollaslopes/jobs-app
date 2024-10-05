@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_company')->references('id')->on('companies');
+            $table->foreignId('id_recruiter')->references('id')->on('users');
             $table->string('title');
             $table->string('city');
             $table->string('state');
