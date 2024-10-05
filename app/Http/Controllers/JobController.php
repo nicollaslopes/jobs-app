@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Services\JobService;
 use App\Models\Company;
 use App\Models\Job;
+use App\Models\User;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -14,9 +15,12 @@ class JobController extends Controller
     {
         $jobSalary = '$' . number_format($job->salary, 2, ',', '.');
         
+        $job = Job::find($job->id);
+        
         return view('jobs.job_show', [
             'job' => $job,
-            'job_salary' => $jobSalary
+            'job_salary' => $jobSalary,
+            'recruiter' => User::find($job->id_recruiter)
         ]);
     }
 
