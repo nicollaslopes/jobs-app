@@ -10,12 +10,12 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <div class="row mt-4">
-                        @foreach($jobs as $key => $job)
+                        @foreach($jobsCompany as $key => $job)
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $job->title }}</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">{{ $companies[$key]->name}}</h6>
+                                        <h6 class="card-subtitle mb-2 text-muted">{{ $job->name}}</h6>
                                         <p class="card-text">Location: {{ $job->city }}, {{ $job->state }}</p>
                                         <p class="card-text">Publish date: {{ \Carbon\Carbon::parse($job->publish_date)->format('d/m/Y') }}</p>
                                         <div class="text-right mt-4">

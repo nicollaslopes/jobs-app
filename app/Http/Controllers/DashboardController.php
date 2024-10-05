@@ -4,22 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Job;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
     public function show()
     {
-        $jobs = Job::all();
-
-        $companies = [];
-
-        foreach ($jobs as $job) {
-            $companies[] = Job::find($job->id)->companies;
-        }
-
+        $jobsCompany = DB::table('jobs')
+                    ->join('companies', 'companies.id', '=', 'jobs.id_company')
+                    ->get();
+                    
         return view('dashboard', [
-            'jobs' => $jobs,
-            'companies' => $companies
+            'jobsCompany' => $jobsCompany
         ]);
     }
 }
