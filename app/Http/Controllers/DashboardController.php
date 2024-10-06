@@ -10,8 +10,9 @@ class DashboardController extends Controller
 {
     public function show()
     {
-        $jobsCompany = DB::table('jobs')
-                    ->join('companies', 'companies.id', '=', 'jobs.id_company')
+        $jobsCompany = DB::table('companies')
+                    ->join('jobs', 'companies.id', '=', 'jobs.id_company')
+                    ->orderBy('jobs.id')
                     ->get();
                     
         return view('dashboard', [
