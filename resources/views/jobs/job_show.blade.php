@@ -33,7 +33,7 @@
                                 <p class="card-text mt-2" style="max-height: 150px; overflow: hidden; white-space: pre-line;">Posted by: {{ $recruiter->name }}</p>
                             </div>
                             <div class="text-right">
-                                <a href="{{ route('dashboard') }}" class="btn btn-secondary form-job-create-input">Go back</a>
+                                <a href="{{ url()->previous() }}" class="btn btn-secondary form-job-create-input">Go back</a>
                             </div>
                         </div>
                     </div>
