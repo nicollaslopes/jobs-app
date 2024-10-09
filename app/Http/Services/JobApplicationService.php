@@ -17,7 +17,7 @@ class JobApplicationService
             'job_id' => 'string|required'
         ]);
 
-        if (!self::userCanApply($request->job_id)) {
+        if (!self::canUserApply($request->job_id)) {
             return false;
         }
 
@@ -27,7 +27,7 @@ class JobApplicationService
         ]);
     }
 
-    public static function userCanApply(string|int $jobId)
+    public static function canUserApply(string|int $jobId): bool
     {
         $user = Auth::user();
 
@@ -35,10 +35,6 @@ class JobApplicationService
                                         ->where('id_job', $jobId)
                                         ->first();
 
-        if ($hasApplication == null) {
-            return true;
-        }
-
-        return false;
+        return $hasApplication == null ? true : false;
     }
 }
