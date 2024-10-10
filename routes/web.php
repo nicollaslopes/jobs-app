@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\JobApplicationController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserProfile;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,8 @@ Route::get('/job/{job}', [JobController::class, 'show'])->middleware(['auth', 'v
 
 Route::post('/application/{application}', [JobApplicationController::class, 'create'])->middleware(['auth', 'verified'])->name('job.application.create');
 Route::get('/applications/', [JobApplicationController::class, 'show'])->middleware(['auth', 'verified'])->name('job.application.show');
+
+Route::get('/my-profile', [UserProfile::class, 'show'])->middleware(['auth', 'verified'])->name('my.profile.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
