@@ -1,0 +1,65 @@
+<?php
+
+namespace App\Enums;
+
+enum TechnologiesEnum: string {
+    case DOTNET = '.NET';
+    case ASP_NET_MVC = 'ASP.NET MVC';
+    case AWS = 'AWS';
+    case ANGULAR = 'Angular';
+    case ASP_NET_RAZOR = 'Asp.net Razor';
+    case ASTRO = 'Astro';
+    case BOOTSTRAP = 'Bootstrap';
+    case C = 'C';
+    case C_PLUS_PLUS = 'C++';
+    case CSS = 'CSS';
+    case CSHARP = 'CSharp';
+    case DART = 'Dart';
+    case DELPHI = 'Delphi';
+    case DJANGO = 'Django';
+    case DOCKER = 'Docker';
+    case DRUPAL = 'Drupal';
+    case ELIXIR = 'Elixir';
+    case EMBER_JS = 'Ember.js';
+    case EMOTION = 'Emotion';
+    case ENTITY_FRAMEWORK = 'Entity Framework';
+    case ERLANG = 'Erlang';
+    case EXPRESS_JS = 'Express.js';
+    case GIT = 'Git';
+    case GITHUB_ACTIONS = 'Github Actions';
+    case GO = 'Go';
+    case GOLANG = 'Golang';
+    case GRAPHQL = 'GraphQL';
+    case HTML = 'HTML';
+    case HEROKU = 'Heroku';
+    case JQUERY = 'JQuery';
+    case JSON = 'JSON';
+    case JAVA = 'Java';
+    case JAVASCRIPT = 'JavaScript';
+    case JENKINS = 'Jenkins';
+    case JEST = 'Jest';
+    case KAFKA = 'Kafka';
+    case LARAVEL = 'Laravel';
+    case LINUX = 'Linux';
+    case MARKDOWN = 'Markdown';
+    case MAVEN = 'Maven';
+    case MONGODB = 'MongoDB';
+    case MYSQL = 'MySQL';
+    case NESTJS = 'NestJS';
+    case NODE_JS = 'Node.js';
+    case ORACLE = 'Oracle';
+    case PHP = 'PHP';
+    case PENTEST = 'Pentest';
+    case POSTGRESQL = 'PostgreSQL';
+    case POSTMAN = 'Postman';
+    case PYTHON = 'Python';
+    case RABBITMQ = 'RabbitMQ';
+    case REACT_NATIVE = 'React Native';
+    case REACT_JS = 'React.js';
+    case RUBY = 'Ruby';
+    case RUBY_ON_RAILS = 'Ruby on Rails';
+    case RUST = 'Rust';
+    case SQL = 'SQL';
+    case SQL_SERVER = 'SQL Server';
+    case SQLITE = 'SQLite';
+}
