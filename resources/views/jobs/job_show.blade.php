@@ -7,7 +7,7 @@
 
     <form action="{{ route('job.application.create', $job->id) }}" method="POST">
     @csrf
-        <input type="hidden" value={{ $job->id}} name="job_id">
+        <input type="hidden" value="{{ $job->id }}" name="job_id">
         <div class="py-12">
             <div class="py-12">
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
