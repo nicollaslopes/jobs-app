@@ -26,8 +26,8 @@
                         <div id="techList" class="flex flex-wrap mb-4">
                             @foreach ($techs as $tech)
                                 <div class="mr-4 tech-item">
-                                    <input type="checkbox" id="{{ strtolower(str_replace(' ', '_', $tech->name)) }}" name="technologies[]" value="{{ $tech->name }}" class="mr-2">
-                                    <label for="{{ strtolower(str_replace(' ', '_', $tech->value)) }}" class="text-gray-700">{{ $tech->value }}</label>
+                                    <input type="checkbox" id="{{ strtolower(str_replace(' ', '_', $tech['name'])) }}" name="technologies[]" value="{{ $tech['name'] }}" class="mr-2" @if ($tech["checked"]) checked @endif>
+                                    <label for="{{ strtolower(str_replace(' ', '_', $tech['value'])) }}" class="text-gray-700">{{ $tech['value'] }}</label>
                                 </div>
                             @endforeach
                         </div>
