@@ -54,7 +54,10 @@ class JobApplicationController extends Controller
             'job_position' => $recruiterJobData->title
         ];
 
-        Mail::to($recruiterJobData->email)
-                    ->send(new ApplicationMail($data));
+        try {
+            Mail::to($recruiterJobData->email)
+            ->send(new ApplicationMail($data));
+        } catch (\Throwable $th) {
+        }
     }
 }
