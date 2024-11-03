@@ -11,15 +11,6 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">
-                        <div class="mb-4">
-                            <label for="level" class="block text-sm font-medium text-gray-700">Select Level</label>
-                            <select id="level" name="level" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
-                                <option value="beginner">Beginner</option>
-                                <option value="intermediate">Intermediate</option>
-                                <option value="expert">Expert</option>
-                            </select>
-                        </div>
-
                         <h5 class="text-xl font-semibold mb-4">Technologies:</h5>
                         <input type="text" id="techSearch" placeholder="Search technologies..." class="mb-4 p-2 border border-gray-300 rounded-md w-full" oninput="filterTechnologies()">
 

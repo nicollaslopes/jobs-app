@@ -13,7 +13,6 @@ class UserProfileService
     public static function create(Request $request)
     {
         $request->validate([
-            'level' => 'string|required',
             'technologies' => 'array|required',
         ]);
 
