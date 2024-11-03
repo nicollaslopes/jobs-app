@@ -9,5 +9,5 @@ class UserTechnology extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id_user', 'name'];
+    protected $fillable = ['id_user', 'name', 'value'];
 }

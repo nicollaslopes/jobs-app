@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CandidatesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\JobApplicationController;
 use App\Http\Controllers\JobController;
@@ -33,6 +34,9 @@ Route::get('/applications/', [JobApplicationController::class, 'show'])->middlew
 
 Route::get('/my-profile', [UserProfileController::class, 'show'])->middleware(['auth', 'verified'])->name('my.profile.show');
 Route::post('/my-profile', [UserProfileController::class, 'store'])->middleware(['auth', 'verified'])->name('my.profile.store');
+
+Route::get('/candidate/{user}', [CandidatesController::class, 'show'])->middleware(['auth', 'verified'])->name('candidate.show');
+Route::get('/candidates', [CandidatesController::class, 'list'])->middleware(['auth', 'verified'])->name('candidates.list');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

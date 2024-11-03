@@ -41,4 +41,13 @@ class UserProfileService
             ];
         }, $techs);
     }
+
+    public static function getUserTechnologiesById($userId)
+    {
+
+        return DB::table('user_technologies')
+                                    ->where('id_user', $userId)
+                                    ->get();
+    }
+
 }
