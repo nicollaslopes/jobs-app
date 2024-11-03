@@ -13,7 +13,7 @@ class CandidatesController extends Controller
     {
         $candidates = DB::table('users')
                                 ->where('role', 'user')
-                                ->get();
+                                ->paginate(12);
 
         return view('candidates.index', [
             'candidates' => $candidates

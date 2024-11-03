@@ -24,6 +24,8 @@
                             </div>
                         @endforeach
                     </div>
+
+                    {{ $candidates->links() }}
                 </div>
             </div>
         </div>
