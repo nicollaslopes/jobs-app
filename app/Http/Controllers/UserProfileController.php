@@ -3,11 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Enums\TechnologiesEnum;
 use App\Http\Services\UserProfileService;
-use App\Models\UserTechnology;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class UserProfileController extends Controller
 {
