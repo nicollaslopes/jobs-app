@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_user')->references('id')->on('users');
             $table->string('name');
+            $table->string('value');
             $table->timestamps();
         });
     }

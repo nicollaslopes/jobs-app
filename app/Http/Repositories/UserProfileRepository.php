@@ -14,10 +14,11 @@ class UserProfileRepository implements UserProfileInterface
         $user = Auth::user();
 
         try {
-            foreach ($data->technologies as $technologyName) {
+            foreach ($data->technologies as $key => $technologyName) {
                 UserTechnology::create([
                     'id_user' => $user->id,
-                    'name' => $technologyName
+                    'name' => $technologyName,
+                    'value' => $key
                 ]);
             }
 
