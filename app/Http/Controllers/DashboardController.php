@@ -13,7 +13,7 @@ class DashboardController extends Controller
         $jobsCompany = DB::table('companies')
                     ->join('jobs', 'companies.id', '=', 'jobs.id_company')
                     ->orderBy('jobs.id')
-                    ->get();
+                    ->paginate(9);
                     
         return view('dashboard', [
             'jobsCompany' => $jobsCompany

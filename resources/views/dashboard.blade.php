@@ -26,6 +26,8 @@
                             </div>
                         @endforeach
                     </div>
+                    <br>
+                    {{ $jobsCompany->links() }}
                 </div>
             </div>
         </div>
