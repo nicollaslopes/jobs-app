@@ -1,3 +1,7 @@
+## Demonstration:
+
+https://github.com/user-attachments/assets/e1a05a5e-b46c-4bde-bcd1-4bd142409b83
+
 ## Requirements
 
 - PHP v8.1+
@@ -35,6 +39,6 @@ MAIL_FROM_ADDRESS=test@gmail.com
 MAIL_FROM_NAME=test@gmail.com
 ```
 
-https://github.com/user-attachments/assets/e1a05a5e-b46c-4bde-bcd1-4bd142409b83
+## Receiving email in Mailtrap
 
 ![image](https://github.com/user-attachments/assets/c5441372-6ca8-4106-b216-5a18afe88304)
