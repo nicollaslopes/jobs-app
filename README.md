@@ -22,7 +22,7 @@ https://github.com/user-attachments/assets/e1a05a5e-b46c-4bde-bcd1-4bd142409b83
 - To start the project, run the command `php artisan serve`
 - Visit the URL `http://localhost:8000`
 
-## Configuring Mailtrap
+## Configuring Mailtrap (optional)
 
 - Go to `https://mailtrap.io/signin` and create an account.
 - In the side menu, go to "Email Testing" -> "Inboxes" -> "My Inbox".
