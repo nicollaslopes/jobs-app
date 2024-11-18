@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/e1a05a5e-b46c-4bde-bcd1-4bd142409b83
 
 ## How to test
 
-- Install the extensions: `sudo apt-get install -y php8.3-mysql php8.1-cli php8.3-common php8.3-mysql php8.3-zip php8.3-gd php8.3-mbstring php8.3-curl php8.3-xml php8.3-bcmath`
+- Install the extensions: `sudo apt-get install -y php8.3-mysql php8.3-cli php8.3-common php8.3-mysql php8.3-zip php8.3-gd php8.3-mbstring php8.3-curl php8.3-xml php8.3-bcmath`
 - To download the project dependencies, run the command `composer install`
 - Run the following command to start the containers:  `docker compose up -d`
 - To find the MySQL container IP, run: `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' jobs-app-phpmyadmin-1`
